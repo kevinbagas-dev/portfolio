@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Bagas Hadi Wiyono | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #d1d5db;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #e5e7eb;
+            padding: 8px 14px;
+            border-radius: 20px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        a {
+            color: #2563eb;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kevin Bagas Hadi Wiyono</h1>
+        <p>Fresh Graduate Sistem Informasi | Web Development | Software Testing</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                Saya adalah fresh graduate S1 Sistem Informasi Universitas Gunadarma
+                dengan minat pada Web Development, Software Testing, analisis sistem,
+                dan database.
+            </p>
+
+            <p>
+                Saya memiliki pengalaman akademik dalam mengembangkan website penjualan
+                menggunakan PHP dan MySQL, menerapkan Item-Based Collaborative Filtering
+                menggunakan Cosine Similarity, serta mengintegrasikan payment gateway
+                Midtrans.
+            </p>
+
+            <p>
+                Saya juga memiliki pengalaman melakukan Black Box Testing dan
+                User Acceptance Testing (UAT) pada project tugas akhir.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="card">
+            <div class="skills">
+                <span class="skill">PHP</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">SQL</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">C#</span>
+                <span class="skill">OOP</span>
+                <span class="skill">Software Testing</span>
+                <span class="skill">Black Box Testing</span>
+                <span class="skill">UAT</span>
+                <span class="skill">Debugging</span>
+                <span class="skill">System Analysis</span>
+                <span class="skill">Database Management</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Website Penjualan CakeByVin</h3>
+
+            <p>
+                Website penjualan kue dan cookies berbasis PHP dan MySQL.
+            </p>
+
+            <br>
+
+            <p><strong>Technologies:</strong></p>
+            <p>PHP, MySQL, HTML, CSS, JavaScript, Midtrans</p>
+
+            <br>
+
+            <p><strong>Features:</strong></p>
+            <p>
+                Product catalog, shopping cart, checkout, order management,
+                payment gateway, admin dashboard, and product recommendations.
+            </p>
+
+            <br>
+
+            <p><strong>Recommendation System:</strong></p>
+            <p>
+                Implemented Item-Based Collaborative Filtering using
+                Cosine Similarity based on purchase history.
+            </p>
+
+            <br>
+
+            <p><strong>Testing:</strong></p>
+            <p>
+                Conducted Black Box Testing and User Acceptance Testing (UAT).
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="card">
+            <h3>Universitas Gunadarma</h3>
+            <p>S1 Sistem Informasi — 2022–2026</p>
+            <p>GPA: 3.60 / 4.00</p>
+        </div>
+
+        <div class="card">
+            <h3>SMK Negeri 25 Jakarta</h3>
+            <p>Akuntansi dan Keuangan Lembaga — 2019–2022</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="card">
+            <p>Email: kevinhadibagas@gmail.com</p>
+            <p>GitHub: github.com/kevinbagas-dev</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Kevin Bagas Hadi Wiyono</p>
+    </footer>
+
+</body>
+</html>
