@@ -101,6 +101,11 @@
         .project-details > div { min-width: 0; padding-top: 12px; border-top: 1px solid var(--line); }
         .project-details h4 { margin-bottom: 5px; }
         .project-details p { margin: 0; color: var(--body); font-size: 14px; }
+        .project-documentation { padding: 16px; border: 1px solid #D5E2F2; border-radius: 12px; background: #F4F7FB; }
+        .project-documentation h4 { margin: 0 0 6px; color: var(--ink); font-size: 15px; }
+        .project-documentation p { margin: 0 0 13px; color: var(--body); font-size: 13px; }
+        .documentation-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+        .documentation-link { min-height: 42px; padding: 9px 13px; font-size: 12px; }
         .project-gallery { grid-column: 1 / -1; }
         .project-gallery h4 { margin: 0 0 12px; color: var(--ink); font-size: 15px; }
         .project-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
@@ -273,6 +278,14 @@
                             <div><h4>Sistem Rekomendasi</h4><p>Item-Based Collaborative Filtering dengan Cosine Similarity berdasarkan riwayat pembelian.</p></div>
                             <div><h4>Pengujian &amp; Evaluasi</h4><p>Dilakukan Black Box Testing dan UAT. Evaluasi UAT melibatkan 32 responden dan memperoleh 90,88%, kategori “Sangat Baik”.</p></div>
                         </div>
+                        <div class="project-documentation">
+                            <h4>Testing Documentation</h4>
+                            <p>Berisi 24 skenario Black Box Testing untuk halaman admin dan pengguna, serta evaluasi penerimaan melalui UAT dengan 32 responden. Pengujian pembayaran yang dicantumkan menggunakan simulasi Midtrans Sandbox.</p>
+                            <div class="documentation-actions">
+                                <a href="documents/CakeByVin_QA_Testing_and_UAT_Documentation.pdf" target="_blank" rel="noopener noreferrer" class="button button-primary documentation-link">View Testing Documentation (PDF)</a>
+                                <a href="documents/CakeByVin_QA_Testing_and_UAT_Documentation.pdf" download class="button button-outline documentation-link">Download Testing Report</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-gallery">
                         <h4>Cuplikan fitur lainnya</h4>
@@ -325,7 +338,7 @@
                     <h2>Mari Terhubung</h2>
                     <p>Saya terbuka untuk kesempatan internship, entry-level, maupun posisi IT yang sesuai dengan kemampuan dan pengalaman saya.</p>
                     <div class="contact-links">
-                        <a href="mailto:kevinhadibagas@gmail.com" class="contact-link">Email</a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kevinhadibagas%40gmail.com" class="contact-link">Email</a>
                         <a href="https://github.com/kevinbagas-dev" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub ↗</a>
                     </div>
                 </div>
