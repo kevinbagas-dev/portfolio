@@ -25,7 +25,7 @@
         }
 
         *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 112px; }
         body {
             margin: 0;
             background: var(--paper);
@@ -67,16 +67,16 @@
         .button-primary:hover { background: var(--accent-dark); }
         .button-outline { border-color: #CBD8E9; background: rgba(255,255,255,.78); color: var(--ink); }
         .button-outline:hover { border-color: var(--accent); color: var(--accent-dark); }
-        .cv-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
-        .cv-button { min-height: 56px; max-width: 355px; justify-content: flex-start; border-color: #D1DFF0; background: white; color: var(--ink); }
+        .cv-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+        .cv-button { width: 100%; min-height: 56px; justify-content: flex-start; border-color: #D1DFF0; background: white; color: var(--ink); overflow-wrap: anywhere; }
         .cv-button:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-dark); }
 
-        main section { padding: 83px 0; }
+        main section { padding: clamp(60px, 7vw, 84px) 0; scroll-margin-top: 112px; }
         .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 30px; }
         .section-heading h2 { margin: 0; color: var(--ink); font-size: clamp(28px, 4vw, 38px); font-weight: 740; letter-spacing: -.045em; line-height: 1.2; }
         .section-heading p { max-width: 520px; margin: 9px 0 0; color: var(--muted); }
         .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
-        .about-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 18px; }
+        .about-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(260px, 1fr); gap: 20px; }
         .about-copy, .strength-card { padding: clamp(23px, 4vw, 36px); }
         .about-copy p { margin: 0 0 16px; }
         .about-copy p:last-child { margin-bottom: 0; }
@@ -88,7 +88,7 @@
         .skills-group h3, .project-details h4 { margin: 0 0 14px; color: var(--ink); font-size: 15px; }
         .skills { display: flex; flex-wrap: wrap; gap: 8px; }
         .skill { border: 1px solid #D5E2F2; border-radius: 8px; background: #F0F5FC; color: #234F86; padding: 6px 10px; font-size: 12px; font-weight: 650; }
-        .project-card { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: start; gap: 30px; padding: clamp(25px, 5vw, 44px); }
+        .project-card { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: start; gap: clamp(24px, 3vw, 36px); padding: clamp(25px, 4vw, 44px); }
         .project-label { margin: 0 0 12px; color: var(--accent-dark); font-size: 11px; font-weight: 800; letter-spacing: .13em; }
         .project-card h3 { margin: 0 0 12px; color: var(--ink); font-size: 26px; letter-spacing: -.035em; line-height: 1.25; }
         .project-intro p:last-child { margin-bottom: 0; }
@@ -108,7 +108,7 @@
         .documentation-link { min-height: 42px; padding: 9px 13px; font-size: 12px; }
         .project-gallery { grid-column: 1 / -1; }
         .project-gallery h4 { margin: 0 0 12px; color: var(--ink); font-size: 15px; }
-        .project-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+        .project-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
         .project-preview img { aspect-ratio: 16 / 10; }
         .timeline { padding: clamp(25px, 5vw, 42px); }
         .education-item { position: relative; margin: 0 0 29px; padding-left: 25px; border-left: 2px solid #D5E2F2; }
@@ -127,36 +127,47 @@
         .contact-card h2 { margin: 0 0 10px; color: white; font-size: clamp(27px, 4vw, 38px); letter-spacing: -.04em; }
         .contact-card p { max-width: 610px; margin: 0 auto 24px; color: #D2E1F3; }
         .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .contact-link { min-height: 44px; display: inline-flex; align-items: center; border: 1px solid #718BAD; border-radius: 9px; padding: 9px 17px; color: white; font-size: 13px; font-weight: 700; transition: background .2s ease; }
+        .contact-link { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #8BA4C4; border-radius: 9px; padding: 10px 18px; color: white; font-size: 13px; font-weight: 700; transition: background .2s ease, border-color .2s ease; }
         .contact-link:hover { background: #214C84; }
+        .contact-link:focus-visible { outline-color: #A9CBF5; }
         footer { border-top: 1px solid var(--line); padding: 22px 24px; color: var(--muted); text-align: center; font-size: 12px; }
         footer p { margin: 0; }
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
             .nav-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 15px; }
             .nav-links { width: 100%; gap: 10px 19px; overflow-x: auto; padding-bottom: 2px; }
             .nav-links a { white-space: nowrap; }
             .skills-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .certificate-grid { grid-template-columns: repeat(2, 1fr); }
-            .project-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .project-card { grid-template-columns: minmax(0, 1fr); }
+            .about-grid { grid-template-columns: minmax(0, 1.35fr) minmax(250px, 1fr); }
         }
-        @media (max-width: 620px) {
-            .container { width: min(100% - 36px, 520px); }
-            .hero { padding: 75px 0 66px; }
-            main section { padding: 62px 0; }
+        @media (max-width: 700px) {
+            html { scroll-padding-top: 124px; }
+            main section { scroll-margin-top: 124px; }
+            .container { width: min(100% - 40px, 560px); }
+            .hero { padding: 72px 0 64px; }
+            main section { padding: 64px 0; }
             .section-heading { display: block; margin-bottom: 22px; }
-            .about-grid, .project-card { grid-template-columns: 1fr; gap: 14px; }
-            .project-card { gap: 28px; }
-            .project-details { grid-template-columns: 1fr; gap: 19px; }
-            .project-gallery-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+            .project-card { gap: 24px; }
+            .project-details { gap: 18px; }
             .skills-card { grid-template-columns: 1fr; gap: 24px; }
-            .cv-actions { flex-direction: column; align-items: stretch; }
-            .cv-button { width: 100%; max-width: none; }
-            .hero-actions .button { width: fit-content; }
+            .cv-actions { grid-template-columns: minmax(0, 1fr); }
+            .hero-actions { gap: 10px; }
             .contact-section { padding-top: 0; padding-bottom: 62px; }
         }
+        @media (max-width: 520px) {
+            .project-details,
+            .project-gallery-grid,
+            .certificate-grid { grid-template-columns: minmax(0, 1fr); }
+            .project-documentation { padding: 14px; }
+            .documentation-actions { align-items: stretch; flex-direction: column; }
+            .documentation-link { width: 100%; }
+            .contact-links { gap: 9px; }
+            .contact-link { flex: 1 1 calc(50% - 9px); }
+        }
         @media (max-width: 420px) {
-            .certificate-grid { grid-template-columns: 1fr; }
             .hero-actions { align-items: stretch; flex-direction: column; }
             .hero-actions .button { width: 100%; }
         }
@@ -197,10 +208,12 @@
             <div class="hero-actions">
                 <a href="#projects" class="button button-primary">Lihat Proyek</a>
                 <a href="https://github.com/kevinbagas-dev" target="_blank" rel="noopener noreferrer" class="button button-outline">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/kevin-bagas-hadi-wiyono-480b7a342/" target="_blank" rel="noopener noreferrer" class="button button-outline">LinkedIn ↗</a>
             </div>
             <div class="cv-actions" aria-label="Unduh CV">
                 <a href="Kevin_Bagas_CV_System_Analyst_Business_Analyst.pdf" download class="button cv-button">Download CV — System Analyst / Business Analyst</a>
                 <a href="Kevin_Bagas_CV_Web_Developer_Software_Programmer.pdf" download class="button cv-button">Download CV — Web Developer / Software Programmer</a>
+                <a href="Kevin_Bagas_CV_QA_Software_Tester.pdf" download class="button cv-button">Download CV — Software QA / Software Tester</a>
             </div>
         </div>
     </header>
@@ -302,6 +315,10 @@
                                 <img src="images/cakebyvin-admin.png" alt="Dashboard admin CakeByVin dengan navigasi pengelolaan kategori dan produk." loading="lazy" decoding="async">
                                 <figcaption>Dashboard admin</figcaption>
                             </figure>
+                            <figure class="project-preview">
+                                <img src="images/cakebyvin-products.png" alt="Halaman katalog CakeByVin yang menampilkan daftar kue dan cookies beserta foto dan deskripsi produk." loading="lazy" decoding="async">
+                                <figcaption>Katalog Produk</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </article>
@@ -340,6 +357,7 @@
                     <div class="contact-links">
                         <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kevinhadibagas%40gmail.com" class="contact-link">Email</a>
                         <a href="https://github.com/kevinbagas-dev" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/kevin-bagas-hadi-wiyono-480b7a342/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn ↗</a>
                     </div>
                 </div>
             </div>
